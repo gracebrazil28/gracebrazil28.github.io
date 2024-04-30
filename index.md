@@ -7,11 +7,11 @@ title: DREAM Research Project - Grace Brazil
 {:toc}
 
 ## About Me
-Hi! I'm Grace Brazil, a Master's student in Computer Science at Georgia Institute of Technology, focusing on Machine Learning (expected graduation December 2025).  Welcome to my website dedicated to my DREAM Summer Research Project! 👋
+Hi! I'm Grace Brazil, a graduate student in Computer Science (MSCS) at Georgia Institute of Technology, focusing on Machine Learning and expected graduation December 2025.  Welcome to my website dedicated to my DREAM Summer Research Project! 👋
 
-Prior to pursuing my graduate studies, I was a Senior Engineer at Qualcomm with ~4 years of experience in software integration and testing. This background, combined with my passion for AI/ML, fuels my desire to develop practical and trustworthy solutions that enhance collaboration between humans and AI. 
+Upon completing my BS in Electrical Engineering (BSEE) at the University of Central Florida, I started on my career in the tech industry. I joined Qualcomm as an Engineer and quickly progressed to a Senior Engineer role within 4 years. My role at Qualcomm was on software integration and testing team within the 5G modem system testing world. This background, combined with my passion for AI/ML, fuels my desire to develop practical and trustworthy solutions that enhance collaboration between humans and AI.
 
-Learn more about me and my work on my personal website: Grace Brazil's Tech Blog: [https://gracebrazil.tech.blog/](https://gracebrazil.tech.blog/).
+Learn more about me and my work on my personal website:  [Personal Website](https://gracebrazil.tech.blog/).
 
 **Connect with me:**
 
