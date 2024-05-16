@@ -21,7 +21,6 @@ Learn more about me and my work on my personal website:  [Personal Website](http
 * Email: [Email me](mailto:gbrazil2@gatech.edu)
 
 **My Research Interests**
-
 * Cognitive AI Representations
 * Human-Machine Collaboration
 * Explainable Artificial Intelligence
@@ -29,7 +28,11 @@ Learn more about me and my work on my personal website:  [Personal Website](http
 
 ## About My Advisor
 
-Advisor info goes here.
+[Dr. Ashok K. Goel](https://dilab.gatech.edu/ashok-k-goel/) is a Professor of Computer Science and Human-Centered Computing in the School of [Interactive Computing](https://www.ic.gatech.edu/) at Georgia Institute of Technology and the Chief Scientist with Georgia Tech’s [Center for 21st Century Universities](https://c21u.gatech.edu/). He is also the Executive Director of NSF’s [National AI Institute for Adult Learning and Online Education](https://aialoe.org/).
+Ashok conducted his Ph.D. research in Computer and Information Science at The Ohio State University under the supervision of [Professor (Emeritus) Balakrishnan Chandrasekaran] (http://web.cse.ohio-state.edu/~chandrasekaran.1/index-old.html). His dissertation was titled Integrating Case-Based and Model-Based Reasoning for Adaptive Design Problem Solving. He joined the Georgia Tech faculty in 1989 immediately after receiving his Ph.D. At Georgia Tech, he directs the Design Intelligence Laboratory that presently consists of several faculty, research scientists, and about twenty graduate and undergraduate students.
+
+[Google Scholar](https://scholar.google.com/citations?user=VjNg25EAAAAJ&hl=en)
+[Wikipedia](https://en.wikipedia.org/wiki/Ashok_Goel)
 
 ## About My Project
 
