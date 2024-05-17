@@ -33,14 +33,14 @@ Ashok conducted his Ph.D. research in Computer and Information Science at The Oh
 
 Dr. Goel's research focuses on cognitive systems at the intersection of artificial intelligence and cognitive science, with an emphasis on computational design and creativity inspired by nature. Notably, his work on biologically inspired design won a Best Paper Award at the ACM Conference on Creativity and Cognition. He has contributed significantly to online education, developing virtual teaching assistants like Jill Watson, and has co-edited several influential books. Ashok has received multiple accolades, including the AAAI Outstanding AI Educator Award, and currently leads the National AI Institute for Adult Learning and Online Education. For more details, check out these links about him.
 
-[Google Scholar](https://scholar.google.com/citations?user=VjNg25EAAAAJ&hl=en)
-[Wikipedia](https://en.wikipedia.org/wiki/Ashok_Goel)
+* [Google Scholar](https://scholar.google.com/citations?user=VjNg25EAAAAJ&hl=en)
+* [Wikipedia](https://en.wikipedia.org/wiki/Ashok_Goel)
 
 ## About My Project
 
 My research project aims to enhance the effectiveness of autonomous coaching agents in educational settings by integrating Generative AI with a deep understanding of learning theory. It focuses on how active learning and cognitive engagement impact skill acquisition, and explores methods of explanation generation in AI using Large Language Models (LLMs) to improve the relevance and quality of explanations provided by these systems.
 
-The methodology involves building a Task-Model-Knowledge (TMK) AI model to represent skills that learners need to acquire. This includes testing and data gathering to evaluate the model's effectiveness. Additionally, the project will explore the potential for automating TMK models and analyze the use of multi-agent reasoners. Through these approaches, the research aims to contribute significantly to educational technology, ultimately enhancing the learning experience for students by providing more effective and insightful AI-driven explanations.
+The methodology involves building a Task-Model-Knowledge (TMK) AI model to represent skills that learners need to acquire. This includes testing and data gathering to evaluate the model's effectiveness. Additionally, the project will explore the potential for easing the bottlenecks in automating TMK models creation and analyze the use of multi-agent reasoners with LLMs. Through these approaches, the research aims to contribute significantly to educational technology, ultimately enhancing the learning experience for students by providing more effective and insightful AI-driven explanations.
 
 [My Final Report](files/finalreport.pdf)
 
