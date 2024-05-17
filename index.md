@@ -42,7 +42,7 @@ My research project aims to enhance the effectiveness of autonomous coaching age
 
 The methodology involves building a Task-Model-Knowledge (TMK) AI model to represent skills that learners need to acquire. This includes testing and data gathering to evaluate the model's effectiveness. Additionally, the project will explore the potential for easing the bottlenecks in automating TMK models creation and analyze the use of multi-agent reasoners with LLMs. Through these approaches, the research aims to contribute significantly to educational technology, ultimately enhancing the learning experience for students by providing more effective and insightful AI-driven explanations.
 
-<!--[My Final Report](files/finalreport.pdf) -->
+[My Final Report](files/finalreport.pdf)
 
 ## My Blog
 
