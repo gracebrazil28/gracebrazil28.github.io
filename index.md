@@ -29,10 +29,10 @@ Learn more about me and my work on my personal website:  [Personal Website](http
 ## About My Advisor
 
 [Dr. Ashok K. Goel](https://dilab.gatech.edu/ashok-k-goel/) is a Professor of Computer Science and Human-Centered Computing in the School of [Interactive Computing](https://www.ic.gatech.edu/) at Georgia Institute of Technology and the Chief Scientist with Georgia Tech’s [Center for 21st Century Universities](https://c21u.gatech.edu/). He is also the Executive Director of NSF’s [National AI Institute for Adult Learning and Online Education](https://aialoe.org/).
-Ashok conducted his Ph.D. research in Computer and Information Science at The Ohio State University under the supervision of Professor (Emeritus) [Balakrishnan Chandrasekaran] (https://web.cse.ohio-state.edu/~chandrasekaran.1/index-old.html). His dissertation was titled ***Integrating Case-Based and Model-Based Reasoning for Adaptive Design Problem Solving***. He joined the Georgia Tech faculty in 1989 immediately after receiving his Ph.D. At Georgia Tech, he directs the [Design Intelligence Laboratory](https://dilab.gatech.edu/) that presently consists of several faculty, research scientists, and about twenty graduate and undergraduate students.
+Ashok conducted his Ph.D. research in Computer and Information Science at The Ohio State University under the supervision of Professor (Emeritus) Balakrishnan Chandrasekaran. His dissertation was titled ***Integrating Case-Based and Model-Based Reasoning for Adaptive Design Problem Solving***. He joined the Georgia Tech faculty in 1989 immediately after receiving his Ph.D. At Georgia Tech, he directs the [Design Intelligence Laboratory](https://dilab.gatech.edu/) that presently consists of several faculty, research scientists, and about twenty graduate and undergraduate students.
 
-Dr. Goel's research focuses on cognitive systems at the intersection of artificial intelligence and cognitive science, with an emphasis on computational design and creativity inspired by nature. Notably, his work on biologically inspired design won a Best Paper Award at the ACM Conference on Creativity and Cognition. He has contributed significantly to online education, developing virtual teaching assistants like Jill Watson, and has co-edited several influential books. Ashok has received multiple accolades, including the AAAI Outstanding AI Educator Award, and currently leads the National AI Institute for Adult Learning and Online Education. For more details, check out these links about him.
-
+Dr. Goel's research focuses on cognitive systems at the intersection of artificial intelligence and cognitive science, with an emphasis on computational design and creativity inspired by nature. Notably, his work on biologically inspired design won a Best Paper Award at the ACM Conference on Creativity and Cognition. He has contributed significantly to online education, developing virtual teaching assistants like Jill Watson, and has co-edited several influential books. Ashok has received multiple accolades, including the AAAI Outstanding AI Educator Award, and currently leads the National AI Institute for Adult Learning and Online Education. 
+For more details, check out these links about him:
 * [Google Scholar](https://scholar.google.com/citations?user=VjNg25EAAAAJ&hl=en)
 * [Wikipedia](https://en.wikipedia.org/wiki/Ashok_Goel)
 
@@ -42,7 +42,7 @@ My research project aims to enhance the effectiveness of autonomous coaching age
 
 The methodology involves building a Task-Model-Knowledge (TMK) AI model to represent skills that learners need to acquire. This includes testing and data gathering to evaluate the model's effectiveness. Additionally, the project will explore the potential for easing the bottlenecks in automating TMK models creation and analyze the use of multi-agent reasoners with LLMs. Through these approaches, the research aims to contribute significantly to educational technology, ultimately enhancing the learning experience for students by providing more effective and insightful AI-driven explanations.
 
-[My Final Report](files/finalreport.pdf)
+<!--[My Final Report](files/finalreport.pdf) -->
 
 ## My Blog
 
