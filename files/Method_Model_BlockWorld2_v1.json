@@ -1,0 +1,57 @@
+{
+  "model": "Method",
+  "methods": [
+    {
+      "name": "Evaluate",
+      "description": "Initiates the process of comparing given state to the goal state.",
+      "initial state": "Initial",
+      "inputs": "Set of blocks with their positions",
+      "outputs": "Set of individual positions for each block",
+      "transitions": {
+        "break down each block position": {
+          "type": "operation",
+          "source subtask to target subtask": ["Initial", "Evaluate"]
+        }
+      }
+    },
+    {
+      "name": "Individual Position Extraction",
+      "description": "Extracts the position of each block from the given state.",
+      "initial state": "Evaluate",
+      "inputs": "Set of given state",
+      "outputs": "Individual positions for each block",
+      "transitions": {
+        "extract position for each box": {
+          "type": "operation",
+          "source subtask to target subtask": ["Evaluate", "Individual Position Extraction"]
+        }
+      }
+    },
+    {
+      "name": "Position Check",
+      "description": "Compares the given position of each block to the goal position.",
+      "initial state": "Individual Position Extraction",
+      "inputs": "Individual positions for each block",
+      "outputs": "Boolean values indicating position match for each block",
+      "transitions": {
+        "compare positions": {
+          "type": "operation",
+          "source subtask to target subtask": ["Individual Position Extraction", "Position Check"]
+        }
+      }
+    },
+    {
+      "name": "Delta Counter",
+      "description": "Counts the number of differences between the given and goal positions.",
+      "initial state": "Position Check",
+      "inputs": "Boolean values indicating position match for each block",
+      "outputs": "Delta counter value",
+      "transitions": {
+        "increment delta counter": {
+          "type": "operation",
+          "source subtask to target subtask": ["Position Check", "Delta Counter"]
+        }
+      }
+    }
+  ]
+}

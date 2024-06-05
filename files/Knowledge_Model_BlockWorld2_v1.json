@@ -1,0 +1,179 @@
+{
+  "model": "Knowledge",
+  "instances": [
+    {
+      "name": "BlockA",
+      "concept": "Block"
+    },
+    {
+      "name": "BlockB",
+      "concept": "Block"
+    },
+    {
+      "name": "BlockC",
+      "concept": "Block"
+    },
+    {
+      "name": "BlockD",
+      "concept": "Block"
+    },
+    {
+      "name": "Table",
+      "concept": "Surface"
+    },
+    {
+      "name": "DeltaCounter",
+      "concept": "Counter",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "Goal",
+      "concept": "Set",
+      "values": [
+        "BlockA_on_BlockB",
+        "BlockB_on_BlockC",
+        "BlockC_on_BlockD",
+        "BlockD_on_Table"
+      ]
+    },
+    {
+      "name": "Example1_GivenSet",
+      "concept": "Set",
+      "values": [
+        "BlockA_on_BlockD",
+        "BlockB_on_BlockC",
+        "BlockC_on_Table",
+        "BlockD_on_BlockB"
+      ]
+    },
+    {
+      "name": "Example2_GivenSet",
+      "concept": "Set",
+      "values": [
+        "BlockA_on_Table",
+        "BlockB_on_BlockC",
+        "BlockC_on_Table",
+        "BlockD_on_BlockA"
+      ]
+    },
+    {
+      "name": "Example3_GivenSet",
+      "concept": "Set",
+      "values": [
+        "BlockA_on_Table",
+        "BlockB_on_BlockC",
+        "BlockC_on_Table",
+        "BlockD_on_Table"
+      ]
+    }
+  ],
+  "triples": [
+    {
+      "name": "BlockA_on_BlockB",
+      "instance1": "BlockA",
+      "relation": "on",
+      "instance2": "BlockB"
+    },
+    {
+      "name": "BlockB_on_BlockC",
+      "instance1": "BlockB",
+      "relation": "on",
+      "instance2": "BlockC"
+    },
+    {
+      "name": "BlockC_on_BlockD",
+      "instance1": "BlockC",
+      "relation": "on",
+      "instance2": "BlockD"
+    },
+    {
+      "name": "BlockD_on_Table",
+      "instance1": "BlockD",
+      "relation": "on",
+      "instance2": "Table"
+    },
+    {
+      "name": "BlockA_on_BlockD",
+      "instance1": "BlockA",
+      "relation": "on",
+      "instance2": "BlockD"
+    },
+    {
+      "name": "BlockB_on_BlockC",
+      "instance1": "BlockB",
+      "relation": "on",
+      "instance2": "BlockC"
+    },
+    {
+      "name": "BlockC_on_Table",
+      "instance1": "BlockC",
+      "relation": "on",
+      "instance2": "Table"
+    },
+    {
+      "name": "BlockD_on_BlockB",
+      "instance1": "BlockD",
+      "relation": "on",
+      "instance2": "BlockB"
+    },
+    {
+      "name": "BlockA_on_BlockC",
+      "instance1": "BlockA",
+      "relation": "on",
+      "instance2": "BlockC"
+    },
+    {
+      "name": "BlockB_on_Table",
+      "instance1": "BlockB",
+      "relation": "on",
+      "instance2": "Table"
+    },
+    {
+      "name": "BlockC_on_BlockD",
+      "instance1": "BlockC",
+      "relation": "on",
+      "instance2": "BlockD"
+    },
+    {
+      "name": "BlockD_on_BlockB",
+      "instance1": "BlockD",
+      "relation": "on",
+      "instance2": "BlockB"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Block",
+      "description": "A block that can be stacked on top of other blocks or the table",
+      "properties": [{}]
+    },
+    {
+      "name": "Set",
+      "description": "A configuration of blocks and their positions",
+      "properties": ["set of triples"]
+    },
+    {
+      "name": "Surface",
+      "description": "A surface that blocks can be placed on",
+      "properties": [{}]
+    },
+    {
+      "name": "Counter",
+      "description": "A counter to keep track of the number of differences between given and goal states",
+      "properties": ["integer value"]
+    }
+  ],
+  "relations": [
+    {
+      "name": "on",
+      "concept1": ["Block"],
+      "concept2": ["Block", "Surface"]
+    }
+  ]
+}

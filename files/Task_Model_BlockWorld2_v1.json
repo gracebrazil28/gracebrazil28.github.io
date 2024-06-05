@@ -1,0 +1,41 @@
+{
+  "model": "Task",
+  "tasks": [
+    {
+      "name": "Evaluate",
+      "description": "Initiates the process of comparing given state to the goal state.",
+      "inputs": "Set of blocks with their positions",
+      "outputs": "Set of individual positions for each block",
+      "given condition": "A set of blocks with initial positions is provided",
+      "post-condition": "The given state is broken down into individual box positions",
+      "method": "Evaluate"
+    },
+    {
+      "name": "Individual Position Extraction",
+      "description": "Extracts the position of each block from the given state.",
+      "inputs": "Set of given state",
+      "outputs": "Individual positions for each block",
+      "given condition": "The given state is broken down into individual box positions",
+      "post-condition": "Individual positions for each block are extracted",
+      "method": "Individual Position Extraction"
+    },
+    {
+      "name": "Position Check",
+      "description": "Compares the given position of each block to the goal position.",
+      "inputs": "Individual positions for each block",
+      "outputs": "Boolean values indicating position match for each block",
+      "given condition": "Individual positions for each block are available",
+      "post-condition": "Boolean values indicating position match for each block are determined",
+      "method": "Position Check"
+    },
+    {
+      "name": "Delta Counter",
+      "description": "Counts the number of differences between the given and goal positions.",
+      "inputs": "Boolean values indicating position match for each block",
+      "outputs": "Delta counter value",
+      "given condition": "Boolean values indicating position match for each block are available",
+      "post-condition": "Delta counter value indicating the number of differences is determined",
+      "method": "Delta Counter"
+    }
+  ]
+}
