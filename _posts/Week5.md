@@ -4,6 +4,11 @@ title: Week 5
 ---
 ## TMK Modeling Progress
 
+* [Task Model v2 json file](https://gracebrazil28.github.io/files/Task_Model_BlockWorld2_v2.json)
+* [Method Model v2 json file](https://gracebrazil28.github.io/files/Method_Model_BlockWorld2_v2.json)
+* [Knowledge Model v2 json file](https://gracebrazil28.github.io/files/Knowledge_Model_BlockWorld2_v2.json)
+
+
 ## Literature Review on Hierarchical Task Network (HTN)
 
 ## Literature Review on TMKs and HTNs
