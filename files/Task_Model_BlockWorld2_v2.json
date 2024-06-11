@@ -1,0 +1,79 @@
+{
+  "model": "Task",
+  "tasks": [
+      {
+      "name": "Solve using means ends analysis",
+      "description": "Solves an instance of Means End Analysis problem by breaking down each block position, count the delta difference between the given block from the goal set and choosing the block arrangement with the least delta",
+      "inputs": ["Goal Block Arrangement", "Given Block Arrangement Sequence of Sets"],
+      "outputs": "Block_Arrangement_Answer",
+      "given condition": ["Goal set isn't empty", "Given Block Arrangement Sequence of Sets isn't empty"],
+      "post-condition": "Begin problem solving",
+      "method": "Means End Analysis"
+    },
+    {
+      "name": "Set up the Problem",
+      "description": "Create an instance of the Means End Analysis Problem",
+      "inputs": "Given Block Arrangement Sequence",
+      "outputs": ["Block_Arrangement_1", "Block_Arrangement_2", "Block_Arrangement_3"],
+      "given condition": ["Given block arrangement sequence isn't empty"],
+      "post-condition": ["Block_Arrangement_1 is initialized, Block_Arrangement_2 is initialized, Block_Arrangement_3 is initialized"],
+      "method": "Set Up the Problem"
+    },
+    {
+      "name": "Individual Position Extraction",
+      "description": "Extracts the position of each block from the given state.",
+      "inputs": "Validated set of blocks with their positions",
+      "outputs": "Individual positions for each block",
+      "given condition": "The given block arrangement is initialized",
+      "post-condition": [
+        "Position for block A is extracted",
+        "Position for block B is extracted",
+        "Position for block C is extracted",
+        "Position for block D is extracted"
+      ],
+      "method": "Individual Position Extraction"
+    },
+    {
+      "name": "Position Check",
+      "description": "Compares the given position of each block to the goal position.",
+      "inputs": "Individual positions for each block",
+      "outputs": "Boolean values indicating position match for each block",
+      "given condition": [
+        "Position for block A is extracted",
+        "Position for block B is extracted",
+        "Position for block C is extracted",
+        "Position for block D is extracted"
+      ],
+      "post-condition": [
+        "Position match for block A is determined",
+        "Position match for block B is determined",
+        "Position match for block C is determined",
+        "Position match for block D is determined"
+      ],
+      "method": "Position Check"
+    },
+    {
+      "name": "Delta Counter",
+      "description": "Counts the number of differences between the given and goal positions.",
+      "inputs": "Boolean values indicating position match for each block",
+      "outputs": "Delta counter value",
+      "given condition": [
+        "Position match for block A is determined",
+        "Position match for block B is determined",
+        "Position match for block C is determined",
+        "Position match for block D is determined"
+      ],
+      "post-condition": "Delta counter value indicating the number of differences is determined for a given set",
+      "method": "Delta Counter"
+    },
+    {
+      "name": "Select Next Move",
+      "description": "Selects the next move based on means-end analysis.",
+      "inputs": ["Delta_for_set_1", "Delta_for_set_2", "Delta_for_set_3"],
+      "outputs": "Block arrangement with the lowest delta",
+      "given condition": "Delta counter values for all sets are determined",
+      "post-condition": "Next move based on means-end analysis is determined",
+      "method": "Answer Selection"
+    }
+  ]
+}

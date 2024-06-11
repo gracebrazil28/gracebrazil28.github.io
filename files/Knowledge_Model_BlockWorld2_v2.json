@@ -1,0 +1,189 @@
+{
+  "model": "Knowledge",
+  "instances": [
+    {
+      "name": "BlockA",
+      "concept": "Block"
+    },
+    {
+      "name": "BlockB",
+      "concept": "Block"
+    },
+    {
+      "name": "BlockC",
+      "concept": "Block"
+    },
+    {
+      "name": "BlockD",
+      "concept": "Block"
+    },
+    {
+      "name": "Table",
+      "concept": "Table"
+    },
+    {
+      "name": "Delta",
+      "concept": "Delta",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "Goal",
+      "concept": "Block_Arrangement",
+      "values": [
+        "BlockA_on_BlockB",
+        "BlockB_on_BlockC",
+        "BlockC_on_BlockD",
+        "BlockD_on_Table"
+      ]
+    },
+    {
+      "name": "Block_Arrangement_1",
+      "concept": "Block_Arrangement",
+      "values": [
+        "BlockA_on_BlockD",
+        "BlockB_on_BlockC",
+        "BlockC_on_Table",
+        "BlockD_on_BlockB"
+      ]
+    },
+    {
+      "name": "Block_Arrangement_2",
+      "concept": "Block_Arrangement",
+      "values": [
+        "BlockA_on_Table",
+        "BlockB_on_BlockC",
+        "BlockC_on_Table",
+        "BlockD_on_BlockA"
+      ]
+    },
+    {
+      "name": "Block_Arrangement_3",
+      "concept": "Block_Arrangement",
+      "values": [
+        "BlockA_on_Table",
+        "BlockB_on_BlockC",
+        "BlockC_on_Table",
+        "BlockD_on_Table"
+      ]
+    }
+  ],
+  "triples": [
+    {
+      "name": "BlockA_on_BlockB",
+      "instance1": "BlockA",
+      "relation": "on",
+      "instance2": "BlockB"
+    },
+    {
+      "name": "BlockB_on_BlockC",
+      "instance1": "BlockB",
+      "relation": "on",
+      "instance2": "BlockC"
+    },
+    {
+      "name": "BlockC_on_BlockD",
+      "instance1": "BlockC",
+      "relation": "on",
+      "instance2": "BlockD"
+    },
+    {
+      "name": "BlockD_on_Table",
+      "instance1": "BlockD",
+      "relation": "on",
+      "instance2": "Table"
+    },
+    {
+      "name": "BlockA_on_BlockD",
+      "instance1": "BlockA",
+      "relation": "on",
+      "instance2": "BlockD"
+    },
+    {
+      "name": "BlockB_on_BlockC",
+      "instance1": "BlockB",
+      "relation": "on",
+      "instance2": "BlockC"
+    },
+    {
+      "name": "BlockC_on_Table",
+      "instance1": "BlockC",
+      "relation": "on",
+      "instance2": "Table"
+    },
+    {
+      "name": "BlockD_on_BlockB",
+      "instance1": "BlockD",
+      "relation": "on",
+      "instance2": "BlockB"
+    },
+    {
+      "name": "BlockA_on_BlockC",
+      "instance1": "BlockA",
+      "relation": "on",
+      "instance2": "BlockC"
+    },
+    {
+      "name": "BlockB_on_Table",
+      "instance1": "BlockB",
+      "relation": "on",
+      "instance2": "Table"
+    },
+    {
+      "name": "BlockC_on_BlockD",
+      "instance1": "BlockC",
+      "relation": "on",
+      "instance2": "BlockD"
+    },
+    {
+      "name": "BlockD_on_BlockB",
+      "instance1": "BlockD",
+      "relation": "on",
+      "instance2": "BlockB"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Block",
+      "description": "A block that can be stacked on top of other blocks or the table",
+      "properties": [{}]
+    },
+    {
+      "name": "Block_Arrangement",
+      "description": "A configuration of blocks and their positions",
+      "properties": ["set of triples"]
+    },
+    {
+      "name": "Table",
+      "description": "A place that blocks can be placed on",
+      "properties": [{}]
+    },
+    {
+      "name": "Delta",
+      "description": "A delta counter to keep track of the number of differences between given and goal states",
+      "properties": ["integer value"]
+    },
+    {
+      "name": "Means-End Analysis",
+      "description": "A general-purpose problem-solving method that allows us to look at our goal and continually move towards it by choosing the next state with the least delta to the goal",
+      "properties": [{}]
+    },
+    {
+      "name": "Block World Problem",
+      "description": "In the Block World Problem, we're given an initial arrangement of blocks and a goal arrangement. Our task is to move the blocks so that they match the goal arrangement, using means-end analysis.",
+      "properties": [{}]
+    }
+  ],
+  "relations": [
+    {
+      "name": "on",
+      "concept1": ["Block"],
+      "concept2": ["Block", "Table"]
+    }
+  ]
+}
