@@ -9,6 +9,22 @@ Earlier this week, Istarted integrating the means-end analysis concept into both
 * [Method Model v2 json file](https://gracebrazil28.github.io/files/Method_Model_BlockWorld2_v2.json)
 * [Knowledge Model v2 json file](https://gracebrazil28.github.io/files/Knowledge_Model_BlockWorld2_v2.json)
 
+
+After the sync-up with the IVY Team on Wednesday, I decided to add another transition in order to do an iteration of the means-end problem solving until delta is zero. The transition "answer selected" directs the flow from "Answer Selection" method back to "Set Up Problem" method if the delta counter is not zero, indicating that the problem hasn't been fully solved and another set of block arrangements needs to be processed. Conversely, the transition "problem solved" moves from "Answer Selection" to "Success" when the delta counter is zero, signifying that the problem has been solved successfully. These transitions ensure the process iterates until an optimal solution is found.
+* [Method Model v3 json file](https://gracebrazil28.github.io/files/Method_Model_BlockWorld2_v3.json)
+
+Since Rahul's suggestion of incorportating this for Ravens Progressive Matrices (RPM) problem, I can see some parallels of the FSM in the method model that can be adapted from Blocks World (BW) to Raven's (RPM):
+
+* ***Set Up The Problem (BW) -> Set Up The Problem (RPM)***  - validate and create an instance of the problem setup, define the initial state and goal state for each problem
+* ***Individual Position Extraction (BW) -> Attribute Extraction (RPM)*** - extract and identify key transformations between figures in the RPM
+* ***Position Check (BW)*** -> Attribute Comparison (RPM) - compare the extracted attributes of each figure to identify patterns and transformations
+* ***Delta Counter (BW) -> Delta Counter (RPM)*** - quantify the differences (delta) between the current figure and the goal figure using transformation distance
+* ***Answer Selection (BW) -> Pattern Selection (RPM)*** - select the correct answer based on the lowest delta, identifying the figure that best completes the matrix
+
+For RPM I can see the need for individual operators for the transformation and transformation distance calculator. 
+Individual Operators: to define and apply operators (like rotation, scaling) iteratively to move closer to the goal figure
+Transformation Distance Calculator Operator: to get a numerical value of the current distance – still unsure of how to engineer this, but maybe modeling this might be okay.
+
 ## DI Lab Meeting and Knowledge Share ##
 The team reviewed my labmate's presentation to the NSF and provided updates. There was discussion around standardizing TMK models, developing a modular architecture, addressing challenges like hierarchical decomposition, and assigning more complex skills to build understanding. My action item is to peer review the block world TMK models that have been developed to ensure clarity and consistency with standards.
 
