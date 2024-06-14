@@ -1,0 +1,90 @@
+{
+  "model": "Method",
+  "methods": [
+     {
+      "name": "Means End Analysis",
+      "description": "FSM to solve the block world problem using means end analysis. Evaluates all given sets through problem initialization, position extraction, position check, and delta counting.",
+      "initial state": "Set Up the Problem",
+      "inputs": ["Goal Block Arrangement", "Sequence of Given Block Arrangement"],
+      "outputs": "Block_Arrangement_Answer",
+      "transitions": {
+        "begin problem solving": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Set Up the Problem", "Individual Position Extraction"]
+          ]
+        },
+        "positions extracted for set": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Individual Position Extraction", "Position Check"]
+          ]
+        },
+        "positions checked for set": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Position Check", "Delta Counter"]
+          ]
+        },
+        "delta counted for set": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Delta Counter", "Individual Position Extraction"]
+          ],
+          "datacondition": "More block arrangement to process"
+        },
+        "all sets processed": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Delta Counter", "Answer Selection"]
+          ],
+          "datacondition": "No more block arrangement to process"
+        },
+         "answer selected": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Answer Selection", "Set Up Problem"]
+          ],
+          "datacondition": "Delta is not equal to 0"
+        },
+        "problem solved": {
+          "type": "data condition",
+          "source subtask to target subtask": [
+            ["Answer Selection", "Success"]
+          ],
+          "datacondition": "Delta is equal 0"
+          }
+      }
+    },
+    {
+      "name": "Set Up the Problem",
+      "description": "Create an instance of each of the given block arrangement set to be evaluated one by one",
+      "inputs": "Given Block Arrangement Sequence of Sets",
+      "outputs": ["Block_Arrangement_1", "Block_Arrangement_2", "Block_Arrangement_3"]
+    },
+    {
+      "name": "Individual Position Extraction",
+      "description": "Extracts the position of each block from the given block arrangement.",
+      "inputs": ["Given Block Arrangement"],
+      "outputs": ["Position for block A", "Position for block B", "Position for block C", "Position for block D"]
+    },
+    {
+      "name": "Position Check",
+      "description": "Compares the given position of each block to the goal position.",
+      "inputs":  ["Position for block A", "Position for block B", "Position for block C", "Position for block D"],
+      "outputs": ["Boolean value for block A", "Boolean value for block B", "Boolean value for block C", "Boolean value for block D"]
+    },
+    {
+      "name": "Delta Counter",
+      "description": "Counts the number of differences between the given and goal positions.",
+      "inputs": ["Goal Block Arrangement", "Boolean value for block A", "Boolean value for block B", "Boolean value for block C", "Boolean value for block D"],
+      "outputs": ["Create instance of Delta_for_set"]
+    }, 
+    {
+      "name": "Answer Selection",
+      "description": "Selects the block arrangement with the lowest delta.",
+      "inputs": ["Delta_for_set_1", "Delta_for_set_2", "Delta_for_set_3"],
+      "outputs": "Block_Arrangement_Answer"
+    }
+  ]
+}
