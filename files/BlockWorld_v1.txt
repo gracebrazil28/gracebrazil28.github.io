@@ -1,0 +1,96 @@
+Skill: Means End Analysis
+
+Skill Description: A general-purpose problem-solving method that allows us to look at our goal and continually move towards it by choosing the next state with the least delta to the goal.
+
+--------------------------------------------------
+Problem: Blocks World
+
+Problem Description: The Blocks World problem involves a block arrangement, each represented by a block(e.g., A, B, C, D) and its position, and a table surface. The legal rules are simple: Blocks can be placed on top of each other. Only one block can be placed on top of another block. To move a block that has other blocks placed on top of it, you must first remove the blocks above it until the desired block is free to move. Blocks can also be placed on the table. The primary objective of the Blocks World problem is to select a series of legal moves to go from an initial block arrangement into the goal block arrangement.
+
+Nouns: block arrangement, block, table, legal rules, legal moves, goal block arrangement
+
+Verb phrases: placed on top, placed directly, remove
+
+Stative verbs:  // Unsure on this part
+
+--------------------------------------------------
+
+Knowledge
+
+Concepts and Instances:
+
+block description:
+Concept(block);
+Instance(block, BlockA);
+Instance(block, BlockB);
+Instance(block, BlockC);
+Instance(block, BlockD);
+
+table description:
+Concept(table);
+Instance(table, Table);
+
+delta description:
+Concept(delta);
+Instance(delta, Delta);
+
+block arrangement description:
+Concept(block_arrangement);
+Instance(block_arrangement, Goal);
+Instance(block_arrangement, Block_Arrangement_1);
+Instance(block_arrangement, Block_Arrangement_2);
+Instance(block_arrangement, Block_Arrangement_3);
+
+Relations and Triples:
+
+on description:
+Relation(on, block, block);
+Relation(on, block, table);
+
+goal state description:
+Triple(Goal, BlockA_on_BlockB);
+Triple(Goal, BlockB_on_BlockC);
+Triple(Goal, BlockC_on_BlockD);
+Triple(Goal, BlockD_on_Table);
+
+initial states description:
+
+Triple(Block_Arrangement_1, BlockA_on_BlockD);
+Triple(Block_Arrangement_1, BlockB_on_BlockC);
+Triple(Block_Arrangement_1, BlockC_on_Table);
+Triple(Block_Arrangement_1, BlockD_on_BlockB);
+Triple(Block_Arrangement_2, BlockA_on_Table);
+Triple(Block_Arrangement_2, BlockB_on_BlockC);
+Triple(Block_Arrangement_2, BlockC_on_Table);
+Triple(Block_Arrangement_2, BlockD_on_BlockA);
+Triple(Block_Arrangement_3, BlockA_on_Table);
+Triple(Block_Arrangement_3, BlockB_on_BlockC);
+Triple(Block_Arrangement_3, BlockC_on_Table);
+Triple(Block_Arrangement_3, BlockD_on_Table);
+
+--------------------------------------------------
+Methods
+
+// Work in Progress
+
+--------------------------------------------------
+Tasks
+
+solve using means ends analysis description:
+Solves an instance of Means End Analysis problem by extracting each block position from each block arrangement, counting the delta difference between the given block arrangement from the goal block arrangement, and choosing the block arrangement with the least delta.
+
+
+validate block arrangement description:
+Validate that all block arrangements are legal.
+
+individual position extraction description:
+Extracts the position of each block from the given state.
+
+position check description:
+Compares the given position of each block to the goal position.
+
+delta counter description:
+Counts the number of differences between the given and goal positions.
+
+move selection description:
+Selects the next move based on means-end analysis.
