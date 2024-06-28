@@ -5,9 +5,9 @@ Skill Description: A general-purpose problem-solving method that allows us to lo
 --------------------------------------------------
 Problem: Blocks World
 
-Problem Description: The Blocks World problem involves a block arrangement, each represented by a block(e.g., A, B, C, D) and its position, and a table surface. The legal rules are simple: Blocks can be placed on top of each other. Only one block can be placed on top of another block. To move a block that has other blocks placed on top of it, you must first remove the blocks above it until the desired block is free to move. Blocks can also be placed on the table. The primary objective of the Blocks World problem is to select a series of legal moves to go from an initial block arrangement into the goal block arrangement.
+Problem Description: The Blocks World problem involves a block arrangement, each represented by a block(e.g., A, B, C, D) and its position, and a table surface. The valid rules are simple: Blocks can be placed on top of each other. Only one block can be placed on top of another block. To move a block that has other blocks placed on top of it, you must first remove the blocks above it until the desired block is free to move. Blocks can also be placed on the table. The primary objective of the Blocks World problem is to select a series of valid moves to go from an initial block arrangement into the goal block arrangement.
 
-Nouns: block arrangement, block, position, table, legal rules, legal moves, goal block arrangement
+Nouns: block arrangement, block, position, table, valid rules, valid moves, goal block arrangement
 
 Verb phrases: placed on top, placed directly, remove
 
@@ -35,11 +35,8 @@ Concept(delta);
 Instance(delta, Delta);
 
 block arrangement description:
-Concept(block_arrangement);
-Instance(block_arrangement, Goal);
-Instance(block_arrangement, Block_Arrangement_1);
-Instance(block_arrangement, Block_Arrangement_2);
-Instance(block_arrangement, Block_Arrangement_3);
+Concept(block_arrangement, block_arrangement_name, [block instances], table_instance, [block_table_triples]);
+
 
 Relations and Triples:
 
@@ -48,68 +45,55 @@ Relation(on, block, block);
 Relation(on, block, table);
 
 goal state description:
-// From Erin’s example
-//Triple(Goal, BlockA_on_BlockB);
-//Triple(Goal, BlockB_on_BlockC);
-//Triple(Goal, BlockC_on_BlockD);
-//Triple(Goal, BlockD_on_Table);
-on(BlockA, BlockB)
-on(BlockB, BlockC)
-on(BlockC, BlockD)
-on(BlockD, Table)
+Instance(block_arrangement, Goal, [BlockA, BlockB, BlockC, BlockD], Table1, 
+	[on(BlockA, BlockB), on(BlockB, BlockC), on(BlockC, BlockD), on(BlockD, Table)])
 
 initial states description:
-//How do we link this initial state to a specific block arrangement instance? Wait for next feedback
-//Triple(Block_Arrangement_1, BlockA_on_BlockD);
-//Triple(Block_Arrangement_1, BlockB_on_BlockC);
-//Triple(Block_Arrangement_1, BlockC_on_Table);
-//Triple(Block_Arrangement_1, BlockD_on_BlockB);
-on(BlockA, BlockD)
-on(BlockB, BlockC)
-on(BlockC, Table)
-on(BlockD, BlockB)
+Instance(block_arrangement, Block_Arrangement_1, [BlockA, BlockB, BlockC, BlockD], Table2, 
+	[on(BlockA, BlockD), on(BlockB, BlockC), on(BlockC, Table), on(BlockD, BlockB)])
 
-//Triple(Block_Arrangement_2, BlockA_on_Table);
-//Triple(Block_Arrangement_2, BlockB_on_BlockC);
-//Triple(Block_Arrangement_2, BlockC_on_Table);
-//Triple(Block_Arrangement_2, BlockD_on_BlockA);
-on(BlockA, Table)
-on(BlockB, BlockC)
-on(BlockC, Table)
-on(BlockD, BlockA)
+Instance(block_arrangement, Block_Arrangement_2, [BlockA, BlockB, BlockC, BlockD], Table3, 
+	[on(BlockA, Table), on(BlockB, BlockC), on(BlockC, Table), on(BlockD, BlockA)])
+	
+Instance(block_arrangement, Block_Arrangement_3, [BlockA, BlockB, BlockC, BlockD], Table4, 
+	[on(BlockA, Table), on(BlockB, BlockC), on(BlockC, Table), on(BlockD, Table)])
 
-//Triple(Block_Arrangement_3, BlockA_on_Table);
-//Triple(Block_Arrangement_3, BlockB_on_BlockC);
-//Triple(Block_Arrangement_3, BlockC_on_Table);
-//Triple(Block_Arrangement_3, BlockD_on_Table);
-on(BlockA, Table)
-on(BlockB, BlockC)
-on(BlockC, Table)
-on(BlockD, Table)
 
 --------------------------------------------------
 Methods
-// Only do the operations and not the FSM transitions? Wait for next feedback
-validate block arrangement description:
-Validate that all block arrangements are legal.
 
-individual position extraction description:
-Extracts the position of each block from the given state.
+Operations:
 
-position check description:
-Compares the given position of each block to the goal position.
+operationName description:
+Operation(operationName(values));
 
-delta counter description:
-Counts the number of differences between the given and goal positions.
+Compare Current to Goal:
+Operation(Compare_Current_to_Goal(current_block_arrangement, goal_block_arrangement));
 
-move selection description:
-Selects the next move based on means-end analysis.
+Select Next Block Move:
+Operation(Select_Next_Block_Move([list of validated block arrangement]));
 
-generate move description:
-Generate the next possible legal block arrangement based on the move selected
+Update Current Arrangement:
+Operation(Update_Current_Arrangement(current_block_arrangement));
+
+Generate Move List:
+Operation(Generate_Move_List(current_block_arrangement));
+
+Apply and Validate Move:
+Operation(Apply_and_Validate_Move(list of generated block arrangement));
+
+Count Delta Difference:
+Operation(Count_Delta_Difference(list of validated block arrangement));
+
+Organizer/FSM:
+Top Level Transition:
+- Compare Current to Goal -> Generate Possible Block Moves* -> Select Next Block Move -> Update Current Arrangement.
+
+Sub Level Transition(Generate Possible Block Moves*):
+- Generate Move List -> Apply and Validate Move -> Count Delta Difference
 
 --------------------------------------------------
 Tasks
 
 solve using means ends analysis description:
-Solves an instance of Means End Analysis problem by extracting each block position from each block arrangement, counting the delta difference between the given block arrangement from the goal block arrangement, and choosing the block arrangement with the least delta.
+Solves a Block World problem using Means End Analysis by selecting valid moves to transform an initial block arrangement into the goal block arrangement. The task involves comparing positions, generating valid block moves, and choosing the move with the lowest delta. 

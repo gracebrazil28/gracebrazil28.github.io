@@ -1,0 +1,34 @@
+## Task Questions
+
+Definition:
+What is the goal of the Block World problem?
+
+Execution:
+How do you solve a problem using means end analysis?
+How is the sequence of moves determined using means end analysis?
+
+## Method Questions
+
+Method Execution:
+How do you compare the current block arrangement to the goal arrangement?
+How do you verify that the current state matches the goal state?
+How are possible block moves generated?
+What steps are involved in extracting block positions?
+How is the delta for a block arrangement calculated?
+
+Definition:
+What criteria are used to select the next block move?
+What is the process for handling illegal block arrangements?
+
+## Knowledge Questions
+
+Definition:
+What is a block?
+What is a block arrangement?
+What is a table?
+What is a delta?
+
+Knowledge Application:
+What information is used to compare the current state to the goal state?
+What conditions must be met before moving a block?
+How do you apply the valid rules to determine valid moves?
