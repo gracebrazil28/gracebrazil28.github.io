@@ -9,7 +9,7 @@ Problem Description: The Blocks World problem involves a block arrangement, each
 
 Nouns: block arrangement, block, position, table, valid rules, valid moves, goal block arrangement
 
-Verb phrases: placed on top, placed directly, remove
+Verb phrases: place on top, place directly, remove
 
 Stative verbs:  has other blocks on top, free
 
@@ -20,7 +20,9 @@ Knowledge
 Concepts and Instances:
 
 block description:
-Concept(block);
+Concept(movable) //Boolean property of a block, related to stative verbs
+Concept (letter)
+Concept(block {Property(movable});
 Instance(block, BlockA);
 Instance(block, BlockB);
 Instance(block, BlockC);
@@ -28,7 +30,7 @@ Instance(block, BlockD);
 
 table description:
 Concept(table);
-Instance(table, Table);
+Instance(table, Table1);
 
 delta description:
 Concept(delta);
@@ -64,32 +66,36 @@ Methods
 
 Operations:
 
-operationName description:
-Operation(operationName(values));
-
 Compare Current to Goal:
-Operation(Compare_Current_to_Goal(current_block_arrangement, goal_block_arrangement));
+Operation(Compare_Current_to_Goal(current_block_arrangement: block_arrangement, goal_block_arrangement: block_arrangement),
+    true, current_block_arrangement != goal_block_arrangement);
+
 
 Select Next Block Move:
-Operation(Select_Next_Block_Move([list of validated block arrangement]));
+Operation(Select_Next_Block_Move(validated_block_arrangements: [block_arrangement]), 
+    true, selected_move != none);
 
 Update Current Arrangement:
-Operation(Update_Current_Arrangement(current_block_arrangement));
+Operation(Update_Current_Arrangement(current_block_arrangement: block_arrangement, selected_move: move),
+    true, updated_block_arrangement != current_block_arrangement);
 
 Generate Move List:
-Operation(Generate_Move_List(current_block_arrangement));
+Operation(Generate_Move_List(current_block_arrangement: block_arrangement), 
+    true,move_list != []);
 
 Apply and Validate Move:
-Operation(Apply_and_Validate_Move(list of generated block arrangement));
+Operation(Apply_and_Validate_Move(move_list: [move], current_block_arrangement: block_arrangement), 
+    true, valid_moves != []);
 
 Count Delta Difference:
-Operation(Count_Delta_Difference(list of validated block arrangement));
+Operation(Count_Delta_Difference(validated_block_arrangements: [block_arrangement]), 
+    true, delta_values != []);
 
 Organizer/FSM:
 Top Level Transition:
-- Compare Current to Goal -> Generate Possible Block Moves* -> Select Next Block Move -> Update Current Arrangement.
+- Compare Current to Goal -> Generate Valid Block Moves* -> Select Next Block Move -> Update Current Arrangement.
 
-Sub Level Transition(Generate Possible Block Moves*):
+Sub Level Transition(Generate Valid Block Moves*):
 - Generate Move List -> Apply and Validate Move -> Count Delta Difference
 
 --------------------------------------------------
