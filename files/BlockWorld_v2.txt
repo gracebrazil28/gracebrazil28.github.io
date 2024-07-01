@@ -20,20 +20,19 @@ Knowledge
 Concepts and Instances:
 
 block description:
-Concept(movable) //Boolean property of a block, related to stative verbs
-Concept (letter)
-Concept(block {Property(movable});
-Instance(block, BlockA);
-Instance(block, BlockB);
-Instance(block, BlockC);
-Instance(block, BlockD);
+Concept(movable) //Boolean property of a block, resolve to stative verbs
+Concept(block {Property(name), Property(movable});
+Instance(block, BlockA, True);
+Instance(block, BlockB, True);
+Instance(block, BlockC, True);
+Instance(block, BlockD, True);
 
 table description:
-Concept(table);
+Concept(table {Property(name));
 Instance(table, Table1);
 
 delta description:
-Concept(delta);
+Concept(delta {Property(name});
 Instance(delta, Delta);
 
 block arrangement description:
