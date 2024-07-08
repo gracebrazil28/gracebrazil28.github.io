@@ -5,6 +5,10 @@ title: Week 8
 
 ## TMK Modeling Progress
 
+The state transition diagram has been further refined and specifically, the sub-level FSM for Generating New Move is further broken down which included checking/removing/placing the top block and validating the move right away. 
+![PNG image](https://github.com/gracebrazil28/gracebrazil28.github.io/assets/29846072/bb753659-67e6-4f87-8f52-bd219fa978ab)
+
+For the block arrangements, implementing the configuration had more organization. 
 
 ## DILab Cross Project Meeting
 The main goal of the meeting was to know (atleast for a newbie like me) and reinforce our understanding across teams on how explanations are being generated using our own internal MCM repo. Specifically, Rahul explains how a user's question is classified into one of four categories using a GPT API call. We discussed challenges in question classification and explainability in AI, particularly in the context of generative and cognitive AI. With this, it was emphasized how our project framework for with the integration of generative AI and cognitive AI, needs to be encompassed through the lens of theory of mind.
