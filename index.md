@@ -38,12 +38,11 @@ For more details, check out these links about him:
 
 ## About My Project
 
-My research project aims to enhance the effectiveness of autonomous coaching agents in educational settings by integrating Generative AI with a deep understanding of learning theory. It focuses on how active learning and cognitive engagement impact skill acquisition, and explores methods of explanation generation in AI using Large Language Models (LLMs) to improve the relevance and quality of explanations provided by these systems.
+My research project aims to enhance the effectiveness of autonomous coaching agents in educational settings by integrating Generative AI with a deep understanding of learning theory. This research focuses on how active learning and cognitive engagement impact skill acquisition and explores methods of explanation generation using Large Language Models (LLMs) to improve the relevance and quality of explanations provided by these systems.
 
-The methodology involves building a Task-Model-Knowledge (TMK) AI model to represent skills that learners need to acquire. This includes testing and data gathering to evaluate the model's effectiveness. Additionally, the project will explore the potential of generative AI and analyze the use of multi-agent reasoners with LLMs. Through these approaches, the research aims to contribute significantly to educational technology, ultimately enhancing the learning experience for students by providing more effective and insightful AI-driven explanations.
+The methodology involves developing a Task-Model-Knowledge (TMK) cognitive model designed to represent and evaluate the skills learners need to acquire. This includes testing the TMK model against human-centric evaluation metrics central to explainable AI to assess its effectiveness. Additionally, the project will explore the potential of generative AI and analyze the use of multi-agent reasoners with LLMs. Through these approaches, the research aims to bridge the gap between traditional educational methods and AI-driven solutions, significantly enhancing the learning experience by providing more accurate, contextually relevant, and insightful feedback to students.
 
-* [My Research Proposal](files/Research_Proposal_Summer2024_DREAM.pdf)
-* My Final Paper - coming soon!
+* [My Final Paper](files/Summer24_Final_Paper.pdf)
 
 ## My Blog
 
